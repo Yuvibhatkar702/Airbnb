@@ -1,0 +1,102 @@
+body{
+    background-color: aliceblue !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar{
+    height: 4rem;
+    border-bottom: black;
+}
+
+.fa-solid{
+    color: red;
+    font-size: 25px;
+}
+
+.navbar-nav a{
+    color: black;
+    left: 100px;
+}
+
+.main{
+    background-color: rgb(255, 255, 255);
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.links a{
+    text-decoration: none;
+    margin-left: 12px;
+}
+
+.links a:hover{
+    text-decoration: underline;
+}
+
+.socal-media{
+    width: 100%;
+    font-size: 25px;
+    font-display:inherit;
+}
+
+.links{
+    width: 100%;
+}
+
+.card{
+    width: 18rem !important;
+    border: none !important;
+    margin-left: 3rem;
+    background-color: aliceblue !important;
+}
+
+.card-img-top{
+    border-radius: 1rem;
+    width: 100% !important;
+    object-fit: cover in !important;
+}
+
+.btn{
+    margin: 2rem 0rem ;
+    height: 2.5rem;
+    width: 6rem;
+}
+
+.container{
+    flex: 1;
+}
+
+.form{
+    margin-top: 1rem;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+.Reviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#reating-number{  
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mi:hover .stars{
+    display: block;
+    filter: drop-shadow(0 0 10px #fffdef);
+}
+

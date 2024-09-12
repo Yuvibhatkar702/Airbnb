@@ -1,0 +1,60 @@
+<% layout("layouts/boilerplates") %>
+
+    <body>
+        <form method="post" action="/Listing" novalidate class="needs-validation">
+
+            <div class="col col-6 offset-4">
+                <div>
+                    <label for="title" class="form-label">Enter Title</label>
+                    <input type="text" class="form-control" name="Listing[title]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                      
+                      <div class="invalid-feedback">
+                        Please choose a Title.
+                      </div>
+                </div>
+
+                <div>
+                    <label for="title" class="form-label">Enter Description</label>
+                    <textarea name="Listing[description]" cols="30" rows="5" class="form-control" required></textarea>
+                    <div class="invalid-feedback">
+                        Please Write a Discription.
+                      </div>
+                </div>
+
+                <div>
+                    <label for="price" class="form-label">Enter Image URL</label>
+                    <input type="text" name="Listing[image]" class="form-control" placeholder="If You Not Give Then I Set Randum Pic Auomatically.">
+                </div>
+
+                <div>
+                    <label for="title" class="form-label">Enter Price</label>
+                    <input type="text" class="form-control" name="Listing[price]" placeholder="145000" required>
+                    <div class="invalid-feedback">
+                        Please choose Right Price.
+                      </div>
+                </div>
+
+                <div>
+                    <label for="title" class="form-label" >Enter State</label>
+                    <input type="text" name="Listing[location]" class="form-control" placeholder="Mumbai,Mahatastra" required>
+                    <div class="invalid-feedback">
+                        Please choose City And State.
+                      </div>
+                </div>
+
+                <div>
+                    <label for="price" class="form-label">Enter country</label>
+                    <input type="text" class="form-control" name="Listing[country]" placeholder="india" required>
+                    <div class="invalid-feedback">
+                        Please choose a Country.
+                      </div>
+                </div>
+
+                <button class="btn btn-dark">Add</button>
+
+            </div>
+        </form>
+    </body>

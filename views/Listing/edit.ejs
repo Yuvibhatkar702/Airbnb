@@ -1,0 +1,78 @@
+<% layout("layouts/boilerplates") %>
+<body>
+
+    <form method="POST" action="/Listings/<%= data.id %>?_method=PUT" novalidate class="needs-validation">
+        <div class="col  col-6 offset-4">
+        <div class="form">  
+            <label form="form-label">Title</label> 
+            <input type="text" class="form-control" name="Listing[title]" value="<%= data.title %>" placeholder="<%= data[title]%>" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please choose a Title.
+              </div>
+        </div>
+        
+        <div class="form">  
+            <label form="form-label">Description</label>  
+            <textarea name="Listing[description]" class="form-control" cols="30" rows="5" required><%= data.description %></textarea>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please Write Discription.
+              </div>
+        </div>
+        
+        <div class="form">
+            <label form="form-label">Image URL</label> 
+            <input type="text" class="form-control" name="Listing[image]" value="<%= data.image %>" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please choose a URL.
+              </div>
+        </div>
+                
+        <div class="form">
+            <label form="form-label">Price</label> 
+            <input type="number" class="form-control" name="Listing[price]" value="<%= data.price %>"required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please choose a Price.
+              </div>
+        </div>
+        
+    <div class="row">
+        <div class="form col-md-6">
+            <label form="form-label">State</label> 
+            <input type="text" class="form-control" name="Listing[location]" value="<%= data.location %>" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please choose a Title.
+              </div>
+        </div>
+        
+        <div class="form col-md-6">
+            <label form="form-label">Country</label> 
+            <input type="text" class="form-control" name="Listing[country]" value= "<%= data.country %>" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please choose a Country.
+              </div>
+        </div>
+        
+    </div>
+        <button class="btn btn-dark">Edit</button>
+    </div>
+    </form>
+</body>
+</html>

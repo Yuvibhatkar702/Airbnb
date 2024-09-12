@@ -1,0 +1,74 @@
+<% layout("/layouts/boilerplates") %>
+
+    <body>
+        <div class="row">
+            <div class="card" style="width: 18rem;">
+                <img src="<%= data.image %>" class="card-img-top" alt="Image">
+
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        <%=data.title %>
+                    </h5>
+
+                    <p>
+                        <i><%= data.owner %></i>
+                    </p>
+                    <p class="card-text">
+                        <%= data.description %>
+                    </p>
+                    <p class="card-text"> &#8377; <%= data.price.toLocaleString("en-IN") %>
+                    </p>
+                    <p class="card-text">
+                        <%= data.location %>
+                    </p>
+                    <p class="card-text">
+                        <%= data.country %>
+                    </p>
+                </div>
+
+                <% if(user._id.equals(data.owner)) { %>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="/Listing/<%= data.id %>/edit">
+                            <div class="btn btn-dark">Edit</div>
+                        </a>
+                    </div>
+
+                    <div class="col-6">
+                        <form method="POST" action="/Listings/<%= data.id %>?_method=DELETE">
+                            <button class="btn btn-dark">Delete</button>
+                        </form>
+                    </div>
+                </div>
+                <% } %>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="Reviews">
+            <h4>Leave a Reviews</h4>
+            <form method="POST" action="/Listings/<%= data.id %>/Reviews" novalidate class="needs-validation">
+                <div>
+                    <label for="reating" class="form-label">Reviews</label><br>
+                    <input type="range" min="1" max="5" id="reating" name="review[reating]" class="form-range">
+                    <div id="reating-number">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                    </div>
+                </div>
+                <div>
+                    <label for="comments" class="form-label">Comments</label><br>
+                    <textarea required cols="50" rows="4" id="comments" name="review[comments]"></textarea>
+                    <div class="invalid-feedback">Please Enter the some feedback</div>
+                </div>
+                <button class="btn btn-outline-dark ">Submit</button>
+            </form>
+            
+        </div>
+    </body>

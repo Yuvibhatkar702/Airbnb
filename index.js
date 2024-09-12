@@ -50,7 +50,7 @@ passport.serializeUser(User.serializeUser());
     //Desconnect to the session
 passport.deserializeUser(User.deserializeUser());
 
-const dburl = process.env.ATLASDB_URL;
+const dburl = "mongodb+srv://yuvibhatkar702:WFKxvDfK7vjjsyKO@cluster0.6nopu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 main().then(() => {
     console.log("Connected To the dataBase....");
 }).catch((err) => {
@@ -58,7 +58,7 @@ main().then(() => {
 })
 
 async function main() {
-    await mongoose.connect("mongodb://127.0.0.1:27017/rent");
+    await mongoose.connect(dburl);
 }
 
 // app.get("/textListing", async (req,res) => {
